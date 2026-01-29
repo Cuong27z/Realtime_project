@@ -59,31 +59,31 @@ ________________________________________
 ________________________________________
 8. Thu thập log & đo KPI timing
 - 8.1 Log format
-Mỗi lần mở cửa, hệ thống publish log dạng:
+- Mỗi lần mở cửa, hệ thống publish log dạng:
 UnlockedByMQTT;e2e_us=253443;act_us=99842
 UnlockedByFP;id=2;e2e_us=4;act_us=99756
-•	e2e_us: end-to-end latency (µs)
-•	act_us: thời gian actuator/relay (µs)
-8.2 Thu log
-•	Subscribe topic: home/door2/status
-•	Lưu log ra file text, ví dụ:
-•	logs/improved_status.txt
+- e2e_us: end-to-end latency (µs)
+- act_us: thời gian actuator/relay (µs)
+- 8.2 Thu log
+- Subscribe topic: home/door2/status
+- Lưu log ra file text, ví dụ:
+- logs/improved_status.txt
 ________________________________________
 9. Tính KPI (p95 / p99 / jitter / miss rate)
 Script hỗ trợ: calc_kpi.py
 Ví dụ chạy:
 python calc_kpi.py --input logs/improved_status.txt --deadline-ms 100
 Script sẽ in:
-•	Max latency
-•	p50 / p95 / p99
-•	Jitter (max − min)
-•	Deadline miss rate
+- Max latency
+- p50 / p95 / p99
+- Jitter (max − min)
+- Deadline miss rate
 ________________________________________
 10. Thí nghiệm & stress test
 MQTT burst
 Gửi nhiều lệnh "Open" liên tục để tạo overload:
-•	Quan sát latency tăng
-•	Quan sát log CmdDropped:Cooldown
-•	Kiểm tra deadline miss rate
+- Quan sát latency tăng
+- Quan sát log CmdDropped:Cooldown
+- Kiểm tra deadline miss rate
 Luồng Fingerprint vẫn giữ latency thấp và ổn định → chứng minh ưu tiên real-time.
 
