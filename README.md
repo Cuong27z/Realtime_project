@@ -71,9 +71,9 @@ UnlockedByFP;id=2;e2e_us=4;act_us=99756
 ________________________________________
 9. Tính KPI (p95 / p99 / jitter / miss rate)
 Script hỗ trợ: calc_kpi.py
-Ví dụ chạy:
+- Ví dụ chạy:
 python calc_kpi.py --input logs/improved_status.txt --deadline-ms 100
-Script sẽ in:
+- Script sẽ in:
 - Max latency
 - p50 / p95 / p99
 - Jitter (max − min)
