@@ -22,7 +22,7 @@ ________________________________________
 - LCD I2C 16x2 (địa chỉ 0x27)
 - Keypad 4x4
 - Relay module (GPIO 23)
-- Nguồn 5V ổn định cho cảm biến vân tay (khuyến nghị)
+- Nguồn 12V 
 ________________________________________
 4. Yêu cầu phần mềm
 - Arduino IDE ≥ 1.8.x
